@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
+    public class Cliente {
+
+        public string Nombre;
+        public string Apellido;
+        public string Edad;
+        public string Mail;
+        public string TelefonoCelular;
+
+    }
     public class Cita
         
     {  // La clase esta basada en un sistema de citas para un centro de estetica
         public DateTime FechaHora;
         public string Lugar;
-        public string Cliente;
         public float Precio;// no me decido si crear una clase de precios aparte
-        public string Servicio;// Si buscamos un servicio generalmente es para una zna en especifico, pero hay algunos que tienen varias zonas a elegir por lo que un argumento zonas  sirve para definir cuales
-        public string Zona;
+     
 
         public Cita( ) {
 
         
         }
 
-        public Cita (DateTime fechaHora, string lugar, string cliente, float precio, string servicio, string zona)
+        public Cita (DateTime fechaHora, string lugar,float precio)
         {
             this.FechaHora = fechaHora;
             this.Lugar = lugar;
-            this.Cliente = cliente;
+           
 
         }
     }

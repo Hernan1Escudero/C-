@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Producto producto1 = new Producto();
+            Cita producto1 = new Cita();
             producto1.Lugar = "centro";
             producto1.Zona = "piernas";
             Console.WriteLine(producto1.Lugar +" "+ producto1.Zona) ;
