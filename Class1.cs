@@ -25,7 +25,7 @@ namespace ConsoleApp4
         public Producto(DateTime fechaHora, string lugar, string cliente, float precio, string servicio, string zona)
         {
             FechaHora = fechaHora;
-            Lugar = lugar;
+            this.Lugar = lugar;
             this.Cliente = cliente;
             this.Precio = precio;
             this.Servicio = servicio;
