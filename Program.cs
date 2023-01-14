@@ -4,8 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Producto producto1 = new Producto(" Centro ");
-            Console.WriteLine(producto1.Lugar);
+            Producto producto1 = new Producto();
+            producto1.Lugar = "centro";
+            producto1.Zona = "piernas";
+            Console.WriteLine(producto1.Lugar +" "+ producto1.Zona) ;
         }
     }
 
