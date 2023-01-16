@@ -2,3 +2,6 @@ Properties
 obj
 bin
 ConsoleApp4
+/ConsoleApp4.csproj
+/.gitignore
+/.gitattributes
