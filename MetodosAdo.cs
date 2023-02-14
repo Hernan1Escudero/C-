@@ -58,7 +58,7 @@ namespace ConsoleApp4
          using (SqlConnection conection = new SqlConnection(conectionString))
             {
 
-                SqlCommand ProductWithUserID = new SqlCommand($"select * from [dbo].[ProductoVendido]\r\nwhere idVenta ='{id}' ", conection);
+                SqlCommand ProductWithUserID = new SqlCommand($"select * from [dbo].[ProductoVendido]\r\ninner join Usuario on\r\nProductovendido.IdVenta = Usuario.Id\r\nwhere Usuario.Id ='{id}' ", conection);
 
                 conection.Open();
                 SqlDataReader reader = ProductWithUserID.ExecuteReader();
@@ -93,7 +93,7 @@ namespace ConsoleApp4
             using (SqlConnection conection = new SqlConnection(conectionString))
             {
 
-                SqlCommand ProductWithUserID = new SqlCommand($"select * from [dbo].[Venta] where idUsuario = '{id}' ", conection);
+                SqlCommand ProductWithUserID = new SqlCommand($"select * from [dbo].[venta]\r\ninner join Usuario on\r\nventa.IdUsuario = Usuario.Id\r\nwhere Usuario.Id ='{id}' ", conection);
 
                 conection.Open();
                 SqlDataReader reader = ProductWithUserID.ExecuteReader();
